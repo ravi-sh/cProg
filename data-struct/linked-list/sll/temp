@@ -1,0 +1,12 @@
+    git add   ll/sll/Makefile
+	git rm    ll/sll/add_begin.o
+	git rm    ll/sll/add_end.o
+	git add   ll/sll/add_middle.c
+	git add   ll/sll/findLoop.c
+	git add   ll/sll/main.c
+	git rm    ll/sll/main.o
+	git rm    ll/sll/printdata.o
+	git add   ll/sll/sll.h
+	git rm    ll/sll/sll.out
+
+    
