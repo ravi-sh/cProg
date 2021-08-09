@@ -24,6 +24,15 @@ int maxlen(char (*ptr)[MAX_STRLEN], int ele, int len_lim)
     return indx;
 }
 
+int search(char (*ptr)[MAX_STRLEN], int n, char buf[])
+{
+    int i;
+    for (i = 0; i < n; i++)
+        if (strcmp(ptr[i],buf) > 0)
+            return i;
+    return -1;
+}
+
 void sort2dArr(char (*ptr)[MAX_STRLEN], int ele){
     int i, j;
     char temp[MAX_STRLEN];
@@ -49,6 +58,17 @@ int main(){
 
     for(int i =0; i < 4; i++) {
         printf("%s\n", ptr[i]);
+    }
+
+    char buf[MAX_STRLEN];
+
+    puts("Enter the string to search");
+    scanf("%s", buf);
+    if ( search(ptr, 4, buf) != -1 ){
+        printf("Found the string!\n");
+    }
+    else{
+        puts("Not found");
     }
 
     return 0;
