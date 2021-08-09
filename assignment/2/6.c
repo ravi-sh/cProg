@@ -25,8 +25,16 @@ int maxlen(char (*ptr)[MAX_STRLEN], int ele, int len_lim)
 }
 
 void sort2dArr(char (*ptr)[MAX_STRLEN], ele){
-    for(int i = 0; i < ele; i++){
-        	    
+    int i, j;
+    char temp[MAX_STRLEN];
+    for( i = 0; i < ele-1; i++){
+        for(j=i+1; j<ele; j++){
+	    if(strcmp(ptr[i], ptr[j]) > 0){
+	        strcpy(temp,ptr[i]);
+	        strcpy(ptr[i],ptr[j]);
+	        strcpy(ptr[j],temp);
+	    }
+	}
     }
 
 }
