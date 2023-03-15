@@ -1,11 +1,12 @@
 #include <stdio.h>
 
-int main(){
+int main(int argc, char **argv)
+{
 	int ar[] = {10,20,30,40,50};
+	int *ptr;
 
 	int len = sizeof(ar)/sizeof(ar[0]);
-	printf("len[%d]\n", len);
-	int *ptr;
+	//printf("len[%d]\n", len);
 #if 0 // case-1
 	ptr = ar; // or ptr = &ar[0]
 	for(int i=0;i<len;i++){
@@ -46,7 +47,6 @@ int main(){
 
 		ptr = ptr + 4; // +4 is required as the sizeof int is 4bytes
 	}
-	
 
 	return 0;
 }

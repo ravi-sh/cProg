@@ -1,6 +1,6 @@
 /*
- * Suppose there is a pointer p pointing at a variable at memory 1004. 
- * If you deallocate this memory, then this p is called a dangling pointer.
+ * Suppose there is a pointer 'p' pointing at 'a' variable at memory 1004. 
+ * If you deallocate this memory, then this 'p' is called a dangling pointer.
  * 
  */
 
@@ -13,13 +13,15 @@ int main(){
 	int a = 5;
 	
 	ptr = (int *) malloc( sizeof(int) );
-	
-	ptr = &a;
+	printf("addr ptr :%x\n", ptr);
+
+	ptr = &a; // lost the address, ptr is pointing to &a
+	printf("addr ptr (&a) :%x\n", ptr);
 	//*ptr = a;
 
 	free(ptr);
 	// Now this ptr is know as dangaling pointer
-	
+
 	printf("After deallocating the memory, *ptr = %d\n", *ptr);
 	return 0;
 }

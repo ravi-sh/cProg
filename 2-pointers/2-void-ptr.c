@@ -6,9 +6,11 @@
 
 #include <stdio.h>
 
-int main(){
+int main(int argc, char **argv ){
+
 	int a = 20;
 	char c = 'A';
+
 	void *vd;
 
 	vd = &a;
