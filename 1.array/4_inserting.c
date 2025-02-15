@@ -29,10 +29,11 @@ void insert(struct Array *arr, int x)
 
 	i = arr->length-1;
 
-	while(arr->a[i] > x) {
+	while( i>=0 && arr->a[i] > x) {
 		arr->a[i+1] = arr->a[i];
 		i--;
 	}
+
 	arr->a[i+1] = x;
 	arr->length++;
 }

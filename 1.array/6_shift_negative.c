@@ -30,6 +30,7 @@ void swap(int *x, int *y)
 	*y = temp;
 }
 
+/* Rearrange the elements */
 void shiftNegative2left(struct Array *arr)
 {
 	int i, j;
